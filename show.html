@@ -48,7 +48,10 @@
         .spinner { width: 40px; height: 40px; border: 2px solid rgba(212, 175, 55, 0.1); border-top: 2px solid #d4af37; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        #top-right-controls { display: none; }
+        #top-right-controls { position: absolute; top: 20px; right: 20px; display: flex; gap: 20px; z-index: 15; pointer-events: none; }
+        #top-right-controls .control-btn { pointer-events: auto; }
+        #col-media { display: none; }
+        #col-system .control-btn:not(#btn-fullscreen) { display: none; }
         .control-col { display: flex; flex-direction: column; gap: 15px; }
         
         .control-btn { background: rgba(10, 10, 10, 0.6); border: 1px solid rgba(212, 175, 55, 0.4); color: #d4af37; width: 100px; padding: 5px 0; border-radius: 7px; font-family: 'Cinzel', serif; font-size: 14px; font-weight: 600; cursor: pointer; backdrop-filter: blur(5px); transition: all 0.3s ease; }
@@ -58,7 +61,7 @@
         
         #file-input, #music-input, #import-input { display: none; }
 
-        #webcam-wrapper { position: absolute; bottom: 10px; right: 20px; opacity: 1; pointer-events: auto; border: 2px solid rgba(212, 175, 55, 0.8); border-radius: 4px; background: #000; z-index: 50; width: 160px; height: 120px; transition: opacity 0.5s; overflow: hidden; }
+        #webcam-wrapper { position: absolute; bottom: 10px; right: 20px; opacity: 1; pointer-events: auto; border: 2px solid rgba(212, 175, 55, 0.8); border-radius: 4px; background: #000; z-index: 50; width: 320px; height: 240px; transition: opacity 0.5s; overflow: hidden; }
         #webcam { display: none; }
         #webcam-preview { width: 100%; height: 100%; transform: scaleX(-1); display: block; object-fit: cover; }
 
